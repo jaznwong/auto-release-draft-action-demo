@@ -5,9 +5,9 @@ on:
       - master
   create:
 
-  jobs:
-  build:
-    name: Build and Test
+jobs:
+  test:
+    name: Test
     # good to run and build on multiple OS
     runs-on: ${{ matrix.os }}
     strategy:
