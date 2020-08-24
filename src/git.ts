@@ -100,7 +100,7 @@ export async function getCommitMessagesFrom(tag: string): Promise<string> {
         'git',
         ['log',
         '--format=%s',
-        tag],
+        '${tag}'],
         options); 
     
     core.debug(`The commit messages from ${tag} are:\n${commitMessages}`)

@@ -18,7 +18,8 @@ jobs:
         uses: actions/checkout@v1
         # invoke our custom action
       - name: restore dependencies and build
-        run: npm ci && npm run all
+        run: npm ci
+        run: npm run all
       - name: Create a release draft for a version tag
         id: create-release-draft
         # since action is defined in the same repo
