@@ -19,6 +19,6 @@ jobs:
         # invoke our custom action
       - name: Create a release draft for a version tag
         id: create-release-draft
-        uses: ./ # since action is defined in the same repo 
+        uses: src/ # since action is defined in the same repo 
       - name: Print the URL of the release draft
         run: echo ${{ steps.create-release-draft.outputs.release-url }}
