@@ -16,6 +16,6 @@ jobs:
       - name: Get the sources
         uses: actions/checkout@v1
       - name: Restore the dependencies
-        uses: npm ci
+        run: npm ci
       - name: Build
         uses: npm run all # checks formatting, transpiles TS to JS, & runs unit tests
