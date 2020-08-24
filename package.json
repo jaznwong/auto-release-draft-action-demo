@@ -25,7 +25,9 @@
   "author": "Jasmine Wong",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.4"
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "semver": "^7.3.2"
   },
   "devDependencies": {
     "@types/jest": "^26.0.10",
