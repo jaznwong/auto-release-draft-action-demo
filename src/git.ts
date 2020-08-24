@@ -38,7 +38,7 @@ export async function getPreviousVersionTag(tag: string): Promise<string | null>
         '--match', 'v[0=9]*',
         '--abbrev=0',
         '--first-parent',
-        '${tag}^'],
+        `${tag}^`],
         options)
 
     //to log result of the command
@@ -100,7 +100,7 @@ export async function getCommitMessagesFrom(tag: string): Promise<string> {
         'git',
         ['log',
         '--format=%s',
-        '${tag}'],
+        tag],
         options); 
     
     core.debug(`The commit messages from ${tag} are:\n${commitMessages}`)
