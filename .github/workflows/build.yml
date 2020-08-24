@@ -18,4 +18,4 @@ jobs:
       - name: Restore the dependencies
         run: npm ci
       - name: Build
-        uses: npm run all # checks formatting, transpiles TS to JS, & runs unit tests
+        runs: npm run all # checks formatting, transpiles TS to JS, & runs unit tests
