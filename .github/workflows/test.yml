@@ -17,8 +17,15 @@ jobs:
       - name: Get the sources
         uses: actions/checkout@v1
         # invoke our custom action
+      - name: restore dependencies and build
+        run: npm ci
+             npm run all
       - name: Create a release draft for a version tag
         id: create-release-draft
-        uses: ./ # since action is defined in the same repo 
+        # since action is defined in the same repo
+        uses: ./ 
+        # adding the required input
+        with: 
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Print the URL of the release draft
         run: echo ${{ steps.create-release-draft.outputs.release-url }}
