@@ -17,8 +17,9 @@ jobs:
       - name: Get the sources
         uses: actions/checkout@v1
         # invoke our custom action
-      - name: restore dependencies and build
+      - name: restore dependencies
         run: npm ci
+      - name: build
         run: npm run all
       - name: Create a release draft for a version tag
         id: create-release-draft
